@@ -47,7 +47,7 @@ project-root/
 2. Masuk ke folder project
 
    ```bash
-   cd klinik-smartone
+   cd adalahpokoknya
    ```
 3. Buka file `index.html` menggunakan browser
 
