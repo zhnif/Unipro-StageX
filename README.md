@@ -42,7 +42,7 @@ project-root/
 1. Clone repository ini
 
    ```bash
-   git clone https://github.com/zhnif/klinik-smartone.git
+   git clone https://github.com/zhnif/Unipro-StageX.git
    ```
 2. Masuk ke folder project
 
