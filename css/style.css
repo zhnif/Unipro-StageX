@@ -306,6 +306,7 @@ img {
 }
 
 @keyframes blink {
+
   0%,
   50% {
     border-color: var(--accent);
@@ -394,7 +395,7 @@ section h2 span {
   color: var(--primary);
 }
 
-section > p {
+section>p {
   text-align: center;
   font-size: 18px;
   color: var(--gray);
@@ -460,54 +461,143 @@ section > p {
   background: var(--light-gray);
 }
 
-.hpk-timeline {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+.hpk-carousel {
+  position: relative;
   margin-top: 50px;
+  margin-bottom: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hpk-item {
-  background: var(--white);
-  padding: 40px 30px;
+.hpk-track {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
   border-radius: 10px;
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
 }
 
-.hpk-item:hover {
-  transform: translateY(-10px);
+.hpk-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.hpk-card.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.hpk-card:hover {
   box-shadow: var(--shadow-lg);
 }
 
 .hpk-icon {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background: var(--primary-light);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 25px;
+  margin: 0 auto 30px;
 }
 
 .hpk-icon i {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   color: var(--primary);
 }
 
-.hpk-item h4 {
-  font-size: 20px;
+.hpk-card h4 {
+  font-size: 24px;
   font-weight: 700;
   color: var(--black);
   margin-bottom: 15px;
 }
 
-.hpk-item p {
+.hpk-card p {
   color: var(--gray);
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Navigation Buttons */
+.hpk-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary);
+  background: var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  z-index: 10;
+}
+
+.hpk-nav:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.hpk-nav i {
+  width: 24px;
+  height: 24px;
+}
+
+.hpk-prev {
+  left: -70px;
+}
+
+.hpk-next {
+  right: -70px;
+}
+
+/* Dots Navigation */
+.hpk-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.hpk-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gray);
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.hpk-dot:hover {
+  background: var(--primary-dark);
+}
+
+.hpk-dot.active {
+  background: var(--primary);
+  width: 32px;
+  border-radius: 6px;
 }
 
 /* ==================== */
@@ -523,7 +613,7 @@ section > p {
   color: var(--white);
 }
 
-.fakta > p {
+.fakta>p {
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -781,17 +871,15 @@ section > p {
 /* CALCULATOR SECTION */
 /* ==================== */
 .calculator {
-  background: linear-gradient(
-    135deg,
-    var(--primary) 0%,
-    var(--primary-dark) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--primary) 0%,
+      var(--primary-dark) 100%);
   color: var(--white);
 }
 
 .calculator h2,
 .calculator h2 span,
-.calculator > p {
+.calculator>p {
   color: var(--white);
 }
 
@@ -1358,6 +1446,7 @@ footer {
     transform: translateY(-50px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -1369,11 +1458,9 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 30px;
-  background: linear-gradient(
-    135deg,
-    var(--primary) 0%,
-    var(--primary-dark) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--primary) 0%,
+      var(--primary-dark) 100%);
   color: var(--white);
   border-radius: 15px 15px 0 0;
 }
@@ -1599,6 +1686,7 @@ footer {
 /* RESPONSIVE */
 /* ==================== */
 @media (max-width: 1200px) {
+
   .service-container,
   .blog-container {
     grid-template-columns: repeat(2, 1fr);
@@ -1653,8 +1741,16 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .hpk-timeline {
-    grid-template-columns: 1fr;
+  .hpk-carousel {
+    margin-bottom: 50px;
+  }
+
+  .hpk-prev {
+    left: 10px;
+  }
+
+  .hpk-next {
+    right: 10px;
   }
 
   .footer-container {

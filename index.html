@@ -11,8 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -36,14 +35,12 @@
       </div>
       <div class="top-bar-right">
         <div class="top-bar-item">
-          <a href="#" style="color: var(--text-muted)"
-            ><i data-feather="facebook"></i
-          ></a>
+          <a href="#" style="color: var(--text-muted)"><i
+              data-feather="facebook"></i></a>
         </div>
         <div class="top-bar-item">
-          <a href="#" style="color: var(--text-muted)"
-            ><i data-feather="instagram"></i
-          ></a>
+          <a href="#" style="color: var(--text-muted)"><i
+              data-feather="instagram"></i></a>
         </div>
       </div>
     </div>
@@ -74,16 +71,13 @@
       <div class="hero-slider">
         <div
           class="slide active"
-          style="background-image: url('img/stunting-1.avif')"
-        ></div>
+          style="background-image: url('img/stunting-1.avif')"></div>
         <div
           class="slide"
-          style="background-image: url('img/stunting-2.avif')"
-        ></div>
+          style="background-image: url('img/stunting-2.avif')"></div>
         <div
           class="slide"
-          style="background-image: url('img/stunting-3.avif')"
-        ></div>
+          style="background-image: url('img/stunting-3.avif')"></div>
         <div class="hero-overlay"></div>
       </div>
 
@@ -113,9 +107,7 @@
             margin-top: 10px;
             display: inline-block;
             font-weight: 700;
-          "
-          >HUBUNGI KAMI ›</a
-        >
+          ">HUBUNGI KAMI ›</a>
       </div>
       <div class="info-box">
         <h3>Doctors Timetable</h3>
@@ -127,9 +119,7 @@
             margin-top: 10px;
             display: inline-block;
             font-weight: 700;
-          "
-          >LIHAT JADWAL ›</a
-        >
+          ">LIHAT JADWAL ›</a>
       </div>
       <div class="info-box">
         <h3>Opening Hours</h3>
@@ -145,9 +135,7 @@
             margin-top: 10px;
             display: inline-block;
             font-weight: 700;
-          "
-          >PELAJARI ›</a
-        >
+          ">PELAJARI ›</a>
       </div>
     </div>
 
@@ -182,9 +170,9 @@
         Masa Emas pencegahan stunting dimulai dari masa kehamilan hingga anak
         berusia 2 tahun.
       </p>
-      <div class="hpk-banner">
-        <div class="hpk-timeline">
-          <div class="hpk-item">
+      <div class="hpk-carousel" id="hpkCarousel">
+        <div class="hpk-track">
+          <div class="hpk-card">
             <div class="hpk-icon"><i data-feather="heart"></i></div>
             <h4>Kehamilan (270 Hari)</h4>
             <p>
@@ -192,14 +180,14 @@
               rutin 6x.
             </p>
           </div>
-          <div class="hpk-item">
+          <div class="hpk-card">
             <div class="hpk-icon"><i data-feather="smile"></i></div>
             <h4>0-6 Bulan (180 Hari)</h4>
             <p>
               Inisiasi Menyusu Dini (IMD) & ASI Eksklusif tanpa tambahan apapun.
             </p>
           </div>
-          <div class="hpk-item">
+          <div class="hpk-card">
             <div class="hpk-icon"><i data-feather="sun"></i></div>
             <h4>6-24 Bulan (550 Hari)</h4>
             <p>
@@ -208,6 +196,13 @@
             </p>
           </div>
         </div>
+        <button class="hpk-nav hpk-prev" id="hpkPrev" aria-label="Previous">
+          <i data-feather="chevron-left"></i>
+        </button>
+        <button class="hpk-nav hpk-next" id="hpkNext" aria-label="Next">
+          <i data-feather="chevron-right"></i>
+        </button>
+        <div class="hpk-dots" id="hpkDots"></div>
       </div>
     </section>
 
@@ -243,8 +238,7 @@
           <div class="service-img-holder">
             <img
               src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="Skrining"
-            />
+              alt="Skrining" />
           </div>
           <div class="service-icon-floating">
             <i data-feather="activity"></i>
@@ -261,8 +255,7 @@
           <div class="service-img-holder">
             <img
               src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="Laktasi"
-            />
+              alt="Laktasi" />
           </div>
           <div class="service-icon-floating">
             <i data-feather="heart"></i>
@@ -279,8 +272,7 @@
           <div class="service-img-holder">
             <img
               src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="Katering"
-            />
+              alt="Katering" />
           </div>
           <div class="service-icon-floating">
             <i data-feather="coffee"></i>
@@ -399,8 +391,7 @@
               type="text"
               id="calcName"
               class="form-control"
-              placeholder="Contoh: Budi"
-            />
+              placeholder="Contoh: Budi" />
           </div>
           <div class="form-group">
             <label>Jenis Kelamin</label>
@@ -415,8 +406,7 @@
               type="number"
               id="calcAge"
               class="form-control"
-              placeholder="0 - 60 Bulan"
-            />
+              placeholder="0 - 60 Bulan" />
           </div>
           <div class="form-group">
             <label>Tinggi Badan (cm)</label>
@@ -424,8 +414,7 @@
               type="number"
               id="calcHeight"
               class="form-control"
-              placeholder="Contoh: 85.5"
-            />
+              placeholder="Contoh: 85.5" />
           </div>
           <button type="submit" class="calc-btn">Cek Status Gizi</button>
           <p style="font-size: 0.75rem; margin-top: 1rem; opacity: 0.7">
@@ -438,9 +427,8 @@
           <p style="margin-bottom: 0.8rem; font-weight: 600">
             Direkomendasikan penanganan segera:
           </p>
-          <a href="#contact" class="cta-btn-danger"
-            >Konsultasi Dokter Anak Sekarang</a
-          >
+          <a href="#contact" class="cta-btn-danger">Konsultasi Dokter Anak
+            Sekarang</a>
         </div>
       </div>
     </section>
@@ -455,17 +443,16 @@
             <img
               src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
               alt="Anak Pendek"
-              style="width: 100%; height: 100%; object-fit: cover"
-            />
+              style="width: 100%; height: 100%; object-fit: cover" />
           </div>
           <div class="blog-content">
             <span class="blog-tag">Mitos vs Fakta</span>
             <h3>
               "Anak Pendek Belum Tentu Stunting, Tapi Stunting Pasti Pendek"
             </h3>
-            <a href="artikel/anak-pendek-vs-stunting.html" class="blog-link"
-              >Baca Selengkapnya <i data-feather="arrow-right"></i
-            ></a>
+            <a href="artikel/anak-pendek-vs-stunting.html"
+              class="blog-link">Baca Selengkapnya <i
+                data-feather="arrow-right"></i></a>
           </div>
         </div>
         <div class="blog-card">
@@ -473,15 +460,14 @@
             <img
               src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
               alt="Anak Pendek"
-              style="width: 100%; height: 100%; object-fit: cover"
-            />
+              style="width: 100%; height: 100%; object-fit: cover" />
           </div>
           <div class="blog-content">
             <span class="blog-tag">Gizi</span>
             <h3>Pentingnya Protein Hewani untuk Cegah Stunting</h3>
-            <a href="artikel/pentingnya-protein-hewani.html" class="blog-link"
-              >Baca Selengkapnya <i data-feather="arrow-right"></i
-            ></a>
+            <a href="artikel/pentingnya-protein-hewani.html"
+              class="blog-link">Baca Selengkapnya <i
+                data-feather="arrow-right"></i></a>
           </div>
         </div>
         <div class="blog-card">
@@ -489,15 +475,14 @@
             <img
               src="https://media.istockphoto.com/id/2162119231/photo/a-baby-drinking-milk-using-bottle.webp?a=1&b=1&s=612x612&w=0&k=20&c=WDd8iAAnYFLYXKeYP95ymce5dh_vs3s15K7d-YkDrfE="
               alt="Anak Pendek"
-              style="width: 100%; height: 100%; object-fit: cover"
-            />
+              style="width: 100%; height: 100%; object-fit: cover" />
           </div>
           <div class="blog-content">
             <span class="blog-tag">Tips</span>
             <h3>Mitos atau Fakta: Susu Formula Lebih Baik dari ASI?</h3>
-            <a href="artikel/mitos-fakta-sufor-vs-asi.html" class="blog-link"
-              >Baca Selengkapnya <i data-feather="arrow-right"></i
-            ></a>
+            <a href="artikel/mitos-fakta-sufor-vs-asi.html"
+              class="blog-link">Baca Selengkapnya <i
+                data-feather="arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -515,8 +500,7 @@
             data-doctor-name="Dr. Andi Pratama"
             data-doctor-role="Dokter Spesialis Anak"
             data-doctor-image="img/profil1.jpg"
-            data-doctor-duty="Senin, Rabu, Jumat"
-          >
+            data-doctor-duty="Senin, Rabu, Jumat">
             <img src="img/profil1.jpg" alt="Dr. Andi Pratama" />
             <h3 class="team-card-title">Dr. Andi Pratama</h3>
             <p class="team-card-role">Dokter Spesialis Anak</p>
@@ -526,8 +510,7 @@
             data-doctor-name="Dr. Siti Aminah"
             data-doctor-role="Ahli Gizi Klinis"
             data-doctor-image="img/ProfilDokWedok.jpg"
-            data-doctor-duty="Selasa, Kamis, Sabtu"
-          >
+            data-doctor-duty="Selasa, Kamis, Sabtu">
             <img src="img/ProfilDokWedok.jpg" alt="Dr. Siti Aminah" />
             <h3 class="team-card-title">Dr. Siti Aminah</h3>
             <p class="team-card-role">Ahli Gizi Klinis</p>
@@ -537,8 +520,7 @@
             data-doctor-name="Bidan Rina"
             data-doctor-role="Konselor Menyusui"
             data-doctor-image="img/ProfilDokWedok.jpg"
-            data-doctor-duty="Senin, Selasa, Rabu"
-          >
+            data-doctor-duty="Senin, Selasa, Rabu">
             <img src="img/ProfilDokWedok.jpg" alt="Bidan Rina" />
             <h3 class="team-card-title">Bidan Rina</h3>
             <p class="team-card-role">Konselor Menyusui</p>
@@ -549,8 +531,7 @@
             data-doctor-name="Dr. Budi Santoso"
             data-doctor-role="Psikolog Anak"
             data-doctor-image="img/profil1.jpg"
-            data-doctor-duty="Jumat, Sabtu"
-          >
+            data-doctor-duty="Jumat, Sabtu">
             <img src="img/profil1.jpg" alt="Dr. Budi Santoso" />
             <h3 class="team-card-title">Dr. Budi Santoso</h3>
             <p class="team-card-role">Psikolog Anak</p>
@@ -560,8 +541,7 @@
             data-doctor-name="Dr. Maya Putri"
             data-doctor-role="Dokter Umum"
             data-doctor-image="img/ProfilDokWedok.jpg"
-            data-doctor-duty="Senin, Kamis"
-          >
+            data-doctor-duty="Senin, Kamis">
             <img src="img/ProfilDokWedok.jpg" alt="Dr. Maya Putri" />
             <h3 class="team-card-title">Dr. Maya Putri</h3>
             <p class="team-card-role">Dokter Umum</p>
@@ -593,8 +573,7 @@
           allowfullscreen
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          class="map"
-        >
+          class="map">
         </iframe>
 
         <form action>
@@ -634,15 +613,12 @@
             <p>admin@klinik-smartone.com<br />info@stuntingcare.id</p>
           </div>
           <div class="social fa-social">
-            <a href="https://facebook.com/smksantartika1sda"
-              ><i data-feather="facebook"></i
-            ></a>
-            <a href="https://instagram.com/smksantartika1sda"
-              ><i data-feather="instagram"></i
-            ></a>
-            <a href="https://twitter.com/smksantartika1sda"
-              ><i data-feather="twitter"></i
-            ></a>
+            <a href="https://facebook.com/smksantartika1sda"><i
+                data-feather="facebook"></i></a>
+            <a href="https://instagram.com/smksantartika1sda"><i
+                data-feather="instagram"></i></a>
+            <a href="https://twitter.com/smksantartika1sda"><i
+                data-feather="twitter"></i></a>
           </div>
         </div>
 
@@ -690,15 +666,13 @@
         <div class="doctor-modal-body">
           <p
             id="todayDate"
-            style="font-size: 0.9rem; color: #666; margin-bottom: 1.5rem"
-          ></p>
+            style="font-size: 0.9rem; color: #666; margin-bottom: 1.5rem"></p>
 
           <!-- Doctor Carousel -->
           <div class="doctor-carousel-container">
             <button
               class="doctor-carousel-btn doctor-carousel-prev"
-              id="doctorPrevBtn"
-            >
+              id="doctorPrevBtn">
               <i data-feather="chevron-left"></i>
             </button>
 
@@ -710,8 +684,7 @@
 
             <button
               class="doctor-carousel-btn doctor-carousel-next"
-              id="doctorNextBtn"
-            >
+              id="doctorNextBtn">
               <i data-feather="chevron-right"></i>
             </button>
           </div>
@@ -728,8 +701,7 @@
     <a
       href="https://wa.me/6281234567890?text=Halo%20Admin%20Stunting%20Care"
       class="floating-wa"
-      target="_blank"
-    >
+      target="_blank">
       <i data-feather="message-circle" style="width: 30px; height: 30px"></i>
       <span>Chat Dokter</span>
     </a>

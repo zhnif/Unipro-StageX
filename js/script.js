@@ -650,3 +650,75 @@ window.updateDoctorCarouselDots = function () {
     dot.classList.toggle("active", index === window.doctorCarouselCurrentSlide);
   });
 };
+
+/* ==================== */
+/* HPK CAROUSEL - Manual Navigation Only */
+/* ==================== */
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.getElementById("hpkCarousel");
+  if (!carousel) return;
+
+  const cards = carousel.querySelectorAll(".hpk-card");
+  const prevBtn = document.getElementById("hpkPrev");
+  const nextBtn = document.getElementById("hpkNext");
+  const dotsContainer = document.getElementById("hpkDots");
+
+  let currentIndex = 0;
+  const totalSlides = cards.length;
+
+  // Create dots
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("hpk-dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  const dots = dotsContainer.querySelectorAll(".hpk-dot");
+
+  function updateCarousel() {
+    // Hide all cards
+    cards.forEach((card) => card.classList.remove("active"));
+    // Show current card
+    cards[currentIndex].classList.add("active");
+
+    // Update dots
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentIndex);
+    });
+  }
+
+  function goToSlide(index) {
+    currentIndex = index;
+    updateCarousel();
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+
+  // Event listeners
+  if (prevBtn) {
+    prevBtn.addEventListener("click", prevSlide);
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", nextSlide);
+  }
+
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") prevSlide();
+    if (e.key === "ArrowRight") nextSlide();
+  });
+
+  // Initialize
+  updateCarousel();
+});
