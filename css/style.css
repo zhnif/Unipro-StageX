@@ -2221,6 +2221,38 @@ footer {
         width: 100%;
         max-width: 100%;
     }
+    /* Doctor carousel fix */
+    .doctor-carousel-container {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .doctor-carousel-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .doctor-carousel-track {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    /* Service carousel fix */
+    .service-carousel-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .service-carousel {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .service-track {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
 }
 
 
@@ -2333,6 +2365,54 @@ footer {
     .doctor-carousel-item {
         width: 100%;
         max-width: 100%;
+    }
+    /* Doctor carousel comprehensive fix for mobile */
+    .doctor-carousel-container {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        gap: 0;
+    }
+    .doctor-carousel-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .doctor-carousel-track {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        gap: 0;
+    }
+    .doctor-carousel-item {
+        flex: 0 0 100%;
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    /* Service carousel fix */
+    .service-carousel-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .service-carousel {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .service-track {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .service-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
 }
 
