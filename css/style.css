@@ -2088,17 +2088,25 @@ footer {
     padding: 20px;
   }
 
+  /* Service Carousel Mobile Fix */
+  .service-track {
+    gap: 0;
+    /* Remove gap to fix sliding calculation on mobile */
+  }
+
   .service-card {
     flex: 0 0 100%;
     min-width: 100%;
   }
 
   .service-prev {
-    left: -20px;
+    left: 10px;
+    /* Move buttons inside container for better mobile UX */
   }
 
   .service-next {
-    right: -20px;
+    right: 10px;
+    /* Move buttons inside container for better mobile UX */
   }
 
   .price-list-container {
