@@ -64,7 +64,7 @@
           <span class="typing-text"></span>
         </h1>
         <p>
-          Bersama Madic Care (Stunting Care), wujudkan generasi Indonesia
+          Bersama Medic Care, wujudkan generasi Indonesia
           yang bebas stunting, sehat, dan cerdas.
         </p>
         <a href="#kalkulator" class="btn-hero">Cek Layanan Kami</a>
@@ -147,56 +147,169 @@
         Solusi konkret untuk mendampingi tumbuh kembang buah hati Anda dengan
         standar medis terpercaya.
       </p>
-      <div class="service-container">
-        <div class="service-card">
-          <div class="service-img-holder">
-            <img
-              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="Skrining" />
-          </div>
-          <div class="service-icon-floating">
-            <i data-feather="activity"></i>
-          </div>
-          <div class="service-content">
-            <h3>Skrining Tumbuh Kembang</h3>
-            <p>
-              Deteksi dini keterlambatan bicara (speech delay) atau motorik
-              kasar/halus oleh Dokter Anak.
-            </p>
+      <div class="service-carousel-wrapper">
+        <div class="service-carousel" id="serviceCarousel">
+          <div class="service-track" id="serviceTrack">
+            <div class="service-card">
+              <div class="service-img-holder">
+                <img
+                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                  alt="Skrining" />
+              </div>
+              <div class="service-icon-floating">
+                <i data-feather="activity"></i>
+              </div>
+              <div class="service-content">
+                <h3>Skrining Tumbuh Kembang</h3>
+                <p>
+                  Deteksi dini keterlambatan bicara (speech delay) atau motorik
+                  kasar/halus oleh Dokter Anak.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-img-holder">
+                <img
+                  src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                  alt="Laktasi" />
+              </div>
+              <div class="service-icon-floating">
+                <i data-feather="heart"></i>
+              </div>
+              <div class="service-content">
+                <h3>Pojok Laktasi</h3>
+                <p>
+                  Konsultasi masalah menyusui, edukasi posisi & pelekatan yang
+                  benar, serta manajemen ASI perah.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-img-holder">
+                <img
+                  src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                  alt="Katering" />
+              </div>
+              <div class="service-icon-floating">
+                <i data-feather="coffee"></i>
+              </div>
+              <div class="service-content">
+                <h3>Katering Sehat MPASI</h3>
+                <p>
+                  Layanan katering harian MPASI sesuai usia dan kebutuhan kalori
+                  anak, bebas Gula Garam.
+                </p>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-img-holder">
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                  alt="Layanan Fleksibel" />
+              </div>
+              <div class="service-icon-floating">
+                <i data-feather="settings"></i>
+              </div>
+              <div class="service-content">
+                <h3>Layanan Fleksibel & Personal</h3>
+                <p>
+                  Menyediakan layanan yang fleksibel dan dapat disesuaikan
+                  dengan
+                  kebutuhan pengguna.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="service-card">
-          <div class="service-img-holder">
-            <img
-              src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="Laktasi" />
+        <button class="service-nav service-prev" id="servicePrev"
+          aria-label="Previous">
+          <i data-feather="chevron-left"></i>
+        </button>
+        <button class="service-nav service-next" id="serviceNext"
+          aria-label="Next">
+          <i data-feather="chevron-right"></i>
+        </button>
+        <div class="service-dots" id="serviceDots"></div>
+      </div>
+
+      <!-- Service Price List Section -->
+      <div class="service-price-section" style="margin-top: 80px;">
+        <h3
+          style="text-align: center; margin-bottom: 50px; font-size: 36px;">Paket
+          <span style="color: #d946ef;">Harga Layanan</span></h3>
+        <div class="price-list-container">
+          <div class="price-card basic">
+            <div class="price-header">
+              <h4>Basic</h4>
+              <p class="price-badge">Gratis</p>
+            </div>
+            <div class="price-amount">Free</div>
+            <div class="price-desc">Akses dasar ke layanan kami</div>
+            <div class="price-features">
+              <ul>
+                <li><i data-feather="check"></i> Akses informasi artikel
+                  kesehatan</li>
+                <li><i data-feather="check"></i> 1000 HPK panduan dasar</li>
+                <li><i data-feather="check"></i> Kalkulator gizi MPASI</li>
+                <li><i data-feather="check"></i> Notifikasi kesehatan
+                  mingguan</li>
+              </ul>
+            </div>
           </div>
-          <div class="service-icon-floating">
-            <i data-feather="heart"></i>
+          <div class="price-card premium">
+            <div class="price-header">
+              <h4>Premium</h4>
+              <p class="price-badge popular">Populer</p>
+            </div>
+            <div class="price-amount">
+              <span class="currency">Rp</span>99.000
+              <span class="period">/bulan</span>
+            </div>
+            <div class="price-desc">Akses fitur premium dengan konsultasi
+              terbatas</div>
+            <div class="price-features">
+              <ul>
+                <li><i data-feather="check"></i> Semua fitur Basic</li>
+                <li><i data-feather="check"></i> Konsultasi online 2x/bulan</li>
+                <li><i data-feather="check"></i> Skrining tumbuh kembang
+                  online</li>
+                <li><i data-feather="check"></i> Menu MPASI personal</li>
+                <li><i data-feather="check"></i> Akses perpustakaan artikel
+                  premium</li>
+                <li><i data-feather="check"></i> Notifikasi real-time milestone
+                  bayi</li>
+              </ul>
+            </div>
           </div>
-          <div class="service-content">
-            <h3>Pojok Laktasi</h3>
-            <p>
-              Konsultasi masalah menyusui, edukasi posisi & pelekatan yang
-              benar, serta manajemen ASI perah.
-            </p>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-img-holder">
-            <img
-              src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="Katering" />
-          </div>
-          <div class="service-icon-floating">
-            <i data-feather="coffee"></i>
-          </div>
-          <div class="service-content">
-            <h3>Katering Sehat MPASI</h3>
-            <p>
-              Layanan katering harian MPASI sesuai usia dan kebutuhan kalori
-              anak, bebas Gula Garam.
-            </p>
+          <div class="price-card vip">
+            <div class="price-header">
+              <h4>VIP</h4>
+              <p class="price-badge">Premium</p>
+            </div>
+            <div class="price-amount">
+              <span class="currency">Rp</span>299.000
+              <span class="period">/bulan</span>
+            </div>
+            <div class="price-desc">Akses penuh ke semua layanan dengan
+              prioritas konsultasi</div>
+            <div class="price-features">
+              <ul>
+                <li><i data-feather="check"></i> Semua fitur Premium</li>
+                <li><i data-feather="check"></i> Konsultasi unlimited (online &
+                  offline)</li>
+                <li><i data-feather="check"></i> Pojok Laktasi konsultasi
+                  priority</li>
+                <li><i data-feather="check"></i> Katering MPASI custom (diskon
+                  20%)</li>
+                <li><i data-feather="check"></i> Layanan home visit dokter
+                  anak</li>
+                <li><i data-feather="check"></i> Akses laboratorium klinik
+                  (diskon 15%)</li>
+                <li><i data-feather="check"></i> Personal health consultant</li>
+                <li><i data-feather="check"></i> Prioritas appointment offline
+                  klinik</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -206,7 +319,7 @@
         <div class="hpk-subsection" style="margin-top: 60px;">
           <h3
             style="text-align: center; margin-bottom: 30px; font-size: 50px">Pentingnya
-            <span style="color: #3b82f6;">1000 HPK</span></h3>
+            <span style="color: #d946ef;">1000 HPK</span></h3>
           <p style="text-align: center; margin-bottom: 40px;">
             Masa Emas pencegahan stunting dimulai dari masa kehamilan hingga
             anak
@@ -453,7 +566,7 @@
 
       <!-- Fakta Penting Subsection -->
       <div class="fakta-subsection"
-        style="margin-top: 60px; padding: 40px; padding-top: 40px; border-top: 2px solid rgba(0,0,0,0.1); background-color: #3b82f6; border-radius: 12px;">
+        style="margin-top: 60px; padding: 40px; padding-top: 40px; border-top: 2px solid rgba(0,0,0,0.1); background-color: #d946ef; border-radius: 12px;">
         <h3
           style="text-align: center; margin-bottom: 40px; color: white;"><span>Fakta</span>
           Penting Tentang Stunting</h3>

@@ -18,6 +18,16 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// Tutup menu saat user klik salah satu section link
+if (navbarNav) {
+  const navLinks = document.querySelectorAll(".navBar-nav a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      navbarNav.classList.remove("active");
+    });
+  });
+}
+
 // Highlight navbar menu on scroll
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".navBar-nav a");
@@ -85,9 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 
-  // Stagger check
+  // Stagger check for service and fakta containers
   document
-    .querySelectorAll(".service-container, .fakta-container")
+    .querySelectorAll(".service-track, .fakta-container")
     .forEach((container) => {
       const children = Array.from(container.children);
       children.forEach((child, i) => {
@@ -650,6 +660,75 @@ window.updateDoctorCarouselDots = function () {
     dot.classList.toggle("active", index === window.doctorCarouselCurrentSlide);
   });
 };
+
+/* ==================== */
+/* SERVICE CAROUSEL - Manual Navigation */
+/* ==================== */
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.getElementById("serviceCarousel");
+  if (!carousel) return;
+
+  const track = document.getElementById("serviceTrack");
+  const cards = carousel.querySelectorAll(".service-card");
+  const prevBtn = document.getElementById("servicePrev");
+  const nextBtn = document.getElementById("serviceNext");
+  const dotsContainer = document.getElementById("serviceDots");
+
+  let currentIndex = 0;
+  const cardsPerView = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+  const totalSlides = Math.ceil(cards.length / cardsPerView);
+
+  // Create dots
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement("button");
+    dot.classList.add("service-dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  const dots = dotsContainer.querySelectorAll(".service-dot");
+
+  function updateCarousel() {
+    const offset = -currentIndex * (100 / cardsPerView);
+    track.style.transform = `translateX(${offset}%)`;
+
+    // Update dots
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentIndex);
+    });
+  }
+
+  function goToSlide(index) {
+    currentIndex = Math.min(index, totalSlides - 1);
+    updateCarousel();
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+
+  // Event listeners
+  if (prevBtn) {
+    prevBtn.addEventListener("click", prevSlide);
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", nextSlide);
+  }
+
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") prevSlide();
+    if (e.key === "ArrowRight") nextSlide();
+  });
+});
 
 /* ==================== */
 /* HPK CAROUSEL - Manual Navigation Only */

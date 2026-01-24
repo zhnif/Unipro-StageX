@@ -5,8 +5,8 @@
 
 :root {
   /* Primary Colors - Medicare Clinic */
-  --primary: #00bcd4;
-  --primary-dark: #0097a7;
+  --primary: #e255cf;
+  --primary-dark: #8600a7;
   --primary-light: #e0f7fa;
 
   /* Secondary Colors */
@@ -68,46 +68,6 @@ img {
   height: auto;
 }
 
-/* ==================== */
-/* TOP BAR */
-/* ==================== */
-.top-bar {
-  background: var(--white);
-  padding: 12px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #eee;
-  font-size: 14px;
-  color: var(--gray);
-}
-
-.top-bar-left,
-.top-bar-right {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.top-bar-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.top-bar-item i {
-  width: 16px;
-  height: 16px;
-  color: var(--primary);
-}
-
-.top-bar-item a {
-  color: var(--gray);
-}
-
-.top-bar-item a:hover {
-  color: var(--primary);
-}
 
 /* ==================== */
 /* NAVBAR */
@@ -716,6 +676,226 @@ section>p {
   width: 24px;
   height: 24px;
   color: var(--white);
+}
+
+/* Service Carousel Styles */
+.service-carousel-wrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.service-carousel {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.service-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  gap: 30px;
+}
+
+.service-card {
+  flex: 0 0 calc(33.333% - 20px);
+  min-width: calc(33.333% - 20px);
+  background: var(--white);
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(59, 130, 246, 0.9);
+  color: var(--white);
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  z-index: 20;
+}
+
+.service-nav:hover {
+  background: var(--primary);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.service-nav i {
+  width: 20px;
+  height: 20px;
+}
+
+.service-prev {
+  left: -25px;
+}
+
+.service-next {
+  right: -25px;
+}
+
+.service-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.service-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.3);
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.service-dot.active {
+  background: var(--primary);
+  width: 32px;
+  border-radius: 6px;
+}
+
+/* Service Price List Styles */
+.service-price-section {
+  padding: 40px 0;
+}
+
+.price-list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.price-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border-top: 4px solid;
+  position: relative;
+}
+
+.price-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.price-card.basic {
+  border-top-color: #9ca3af;
+}
+
+.price-card.premium {
+  border-top-color: var(--primary);
+}
+
+.price-card.vip {
+  border-top-color: #fbbf24;
+  transform: scale(1.05);
+}
+
+.price-header {
+  margin-bottom: 20px;
+}
+
+.price-header h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.price-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--primary);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.price-badge.popular {
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--primary);
+}
+
+.price-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 20px 0;
+}
+
+.price-amount .currency {
+  font-size: 20px;
+  vertical-align: super;
+}
+
+.price-amount .period {
+  font-size: 14px;
+  color: var(--gray);
+  font-weight: 400;
+  vertical-align: baseline;
+}
+
+.price-desc {
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.price-features {
+  text-align: left;
+}
+
+.price-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.price-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  font-size: 13px;
+  color: var(--dark);
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.price-features li:last-child {
+  border-bottom: none;
+}
+
+.price-features i {
+  width: 16px;
+  height: 16px;
+  color: var(--primary);
+  flex-shrink: 0;
 }
 
 .service-content {
@@ -1455,6 +1635,52 @@ footer {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .doctor-modal-header {
   display: flex;
   justify-content: space-between;
@@ -1513,13 +1739,19 @@ footer {
 
 .doctor-carousel-track {
   display: flex;
-  transition: transform 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   gap: 20px;
 }
 
 .doctor-carousel-item {
   flex: 0 0 100%;
   min-width: 100%;
+  opacity: 0;
+  animation: slideInRight 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.doctor-carousel-item:nth-child(1) {
+  animation-delay: 0s;
 }
 
 /* Carousel Buttons */
@@ -1551,15 +1783,15 @@ footer {
 /* Doctor Card Modal */
 .doctor-card-modal {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   padding: 20px;
   border-radius: 12px;
   background: var(--light-gray);
   border: 2px solid transparent;
   transition: var(--transition);
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
+  text-align: left;
 }
 
 .doctor-card-modal:hover {
@@ -1569,11 +1801,13 @@ footer {
 
 .doctor-card-modal-image {
   flex-shrink: 0;
+  width: 120px;
+  height: 120px;
 }
 
 .doctor-card-modal-image img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   border-radius: 12px;
   object-fit: cover;
   border: 3px solid var(--white);
@@ -1583,13 +1817,16 @@ footer {
 .doctor-card-modal-info {
   flex: 1;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .doctor-card-modal-info h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--black);
-  margin: 0 0 5px 0;
+  margin: 0 0 8px 0;
 }
 
 .doctor-role {
@@ -1755,6 +1992,19 @@ footer {
     right: 10px;
   }
 
+  .service-card {
+    flex: 0 0 calc(50% - 15px);
+    min-width: calc(50% - 15px);
+  }
+
+  .service-prev {
+    left: -20px;
+  }
+
+  .service-next {
+    right: -20px;
+  }
+
   .footer-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -1778,6 +2028,14 @@ footer {
   .blog-container,
   .fakta-container {
     grid-template-columns: 1fr;
+  }
+
+  .price-list-container {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card.vip {
+    transform: scale(1);
   }
 
   .footer-container {
@@ -1828,6 +2086,32 @@ footer {
 
   .doctor-modal-body {
     padding: 20px;
+  }
+
+  .service-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+
+  .service-prev {
+    left: -20px;
+  }
+
+  .service-next {
+    right: -20px;
+  }
+
+  .price-list-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .price-card {
+    padding: 30px 20px;
+  }
+
+  .price-amount {
+    font-size: 28px;
   }
 }
 
